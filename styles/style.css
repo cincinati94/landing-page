@@ -18,6 +18,10 @@ body {
   background-color: #1f2937;
   margin: 0;
 }
+body > div {
+  display: flex;
+  flex-direction: column;
+}
 
 .background-white {
   background-color: white;
@@ -42,7 +46,6 @@ header li {
   display: flex;
   justify-content: space-between;
   gap: 2em;
-  margin-top: 4em;
   align-items: flex-start;
 }
 
@@ -60,7 +63,7 @@ header li {
 
 .placeholder {
   text-align: center;
-  color: #F9FAF8;
+  color: #f9faf8;
   width: 500px;
   height: 200px;
   background-color: gray;
@@ -72,10 +75,8 @@ header li {
 
 .block-info {
   background-color: white;
-  position: relative;
-  left: 0;
   text-align: center;
-  padding: 1em 0;
+  padding: 10px 0;
 }
 
 .block-info > div > h2 {
@@ -84,14 +85,97 @@ header li {
 }
 
 .quotes {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
   color: black;
-  position: absolute;
 }
 
-.quotes > p {
-  padding: 5vw 10vw 5vw 10vw;
+.quotes > div > p {
+  padding: 4vh 0;
   color: #1f2937;
   font-size: 30px;
   font-style: italic;
+}
+.container-block {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  margin: 4em 0 1em 0;
+  font-size: 17px;
+}
+.quote-author {
+  font-weight: 600;
+  float: right;
+}
+
+.footer-landing {
+  background-color: #1f2937;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.btn-transparent {
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  padding: 1em;
+}
+
+.btn-background-blue {
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+}
+.container-cards{
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.description-card {
+ max-width: 220px;
+}
+
+.card {
+height: 220px;
+width: 220px;
+border:2px solid#0d6efd;
+border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .main {
+    flex-direction: column;
+  }
+  .placeholder {
+    width: -webkit-fill-available;
+  }
+  .container-block {
+    flex-direction: column;
+    padding: 2em;
+  }
+}
+
+@media (max-width:860px){
+  .container-cards{
+    justify-content: center;
+  }
 }
